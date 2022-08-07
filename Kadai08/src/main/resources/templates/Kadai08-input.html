@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top</title>
+</head>
+<body>
+    <h1>下記必要事項を記入の上、確認ボタンを押下してください</h1>
+    <form th:action="@{/confirm}" method="post">
+        <div>
+            <label for="name">名前:</label>
+            <input type="text" name="name">
+        </div>
+        <div>
+            <label for="age">生年月日:</label>
+            <input type="number" name="year">
+            <input type="number" name="month">月
+            <input type="number" name="day">日
+        </div>
+        <div>
+            <label for="gender">性別:</label>
+            <input type="radio" name="man" value="0">男
+            <input type="radio" name="woman" value="1">女
+        </div>
+      
+        <input type="submit"  value="送信">
+    </form>
+</body>
+</html>
